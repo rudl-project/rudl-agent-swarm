@@ -1,0 +1,13 @@
+<?php
+
+define("DEV_MODE", (bool)"%DEV_MODE?0%");
+
+define("RUDL_GITDB_URL", "%RUDL_GITDB_URL%");
+define("RUDL_GITDB_CLIENT_ID", "%RUDL_GITDB_CLIENT_ID%");
+define("RUDL_GITDB_CLIENT_SECRET", "%RUDL_GITDB_CLIENT_SECRET%");
+
+define("SWARM_SCOPE", "%SWARM_SCOPE%");
+define("SWARM_CONF_OBJECT", "%SWARM_CONF_OBJECT?swarm.conf.yml%");
+
+
+
