@@ -32,10 +32,16 @@ class SwarmUpdater
     {
         foreach ($swarmObj->stacks as $stack) {
             echo "Updating stack '$stack->name'...";
-            phore_exec("sudo /usr/bin/docker stack deploy --prune --with-registry-auth :stackName -c :file", [
-                "stackName" => $stack->name,
-                "file" => $path . "/" . $stack->compose_file
-            ]);
+            if ($stack->online) {
+                phore_exec("sudo /usr/bin/docker stack deploy --prune --with-registry-auth :stackName -c :file", [
+                    "stackName" => $stack->name,
+                    "file" => $path . "/" . $stack->compose_file
+                ]);
+            } else {
+                phore_exec("sudo /usr/bin/docker stack rm :stackName", [
+                    "stackName" => $stack->name
+                ]);
+            }
             echo "Done\n";
         }
     }
