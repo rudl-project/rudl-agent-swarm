@@ -47,7 +47,6 @@ class SwarmUpdater
     }
 
 
-
     public function __invoke()
     {
 
