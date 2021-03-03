@@ -49,8 +49,6 @@ class SwarmUpdater
 
     public function __invoke()
     {
-
-
         $swarmObj = $this->gitDb->listObjects(SWARM_SCOPE)->getObject(SWARM_CONF_OBJECT)?->hydrate(T_SwarmObj::class);
 
         if ($swarmObj === null)
