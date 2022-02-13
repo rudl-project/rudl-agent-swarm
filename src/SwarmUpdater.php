@@ -56,7 +56,6 @@ class SwarmUpdater
         assert($swarmObj instanceof T_SwarmObj);
 
         $path = "/tmp/" . SWARM_SCOPE;
-
         $this->gitDb->syncObjects(SWARM_SCOPE, $path);
 
         if ($swarmObj->logins !== null) {
