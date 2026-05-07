@@ -1,4 +1,4 @@
-FROM nfra/kickstart-flavor-php:unstable
+FROM ghcr.io/nfra-project/kickstart-flavor-php:8.3
 ENV DEV_CONTAINER_NAME="rudl-agent-swarm"
 ENV DEV_MODE="0"
 

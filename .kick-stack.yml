@@ -11,4 +11,4 @@ services:
 
 networks:
   rudl-agent-swarm:
-    external: true
+    external: false
